@@ -28,6 +28,7 @@ DDADS1115Val DDADS1115::getValues(){
     ret.volt3 = ret.anag3 * f;
     ret.volt4 = ret.anag4 * f;
     if (SERIAL_ENABLED){
+        Serial.print("F: ");Serial.println(f * 1000.0);
         Serial.print("A0: ");Serial.print(ret.anag1);
         Serial.print(" A1: ");Serial.print(ret.anag2);
         Serial.print(" A2: ");Serial.print(ret.anag3);
@@ -35,7 +36,7 @@ DDADS1115Val DDADS1115::getValues(){
         Serial.print("V0: ");Serial.print(ret.volt1);
         Serial.print(" V1: ");Serial.print(ret.volt2);
         Serial.print(" V2: ");Serial.print(ret.volt3);
-        Serial.println(" V3: ");Serial.println(ret.volt4);
+        Serial.print(" V3: ");Serial.println(ret.volt4);
     }
     return ret;
 }
