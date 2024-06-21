@@ -6,8 +6,6 @@
 #include <SPI.h>
 #include "ADS1x15.h"
 
-#define SERIAL_ENABLED true
-
 struct DDADS1115Val{
     int16_t anag1 = 0;
     int16_t anag2 = 0;
